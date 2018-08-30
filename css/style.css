@@ -1,0 +1,20 @@
+body{
+	background-color: grey;
+}
+
+h1{
+	font-family: Arial;
+	text-align: center;
+}
+
+#dados{
+	font-family: Arial;
+}
+
+#dados h3{
+	text-align: center;
+}
+
+#botoes{
+	border-radius: 50px;
+}
