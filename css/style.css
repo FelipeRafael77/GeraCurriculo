@@ -21,27 +21,42 @@ h1{
 
 #botoes input{
 	 display:inline;
-   text-align: center;
-   float: left;
+    text-align: center;
+    float: left;
     margin: auto;
 }
 
 form .tabela { 
 	width:115%; 
 }
+
 form .tabela .tab{
+ 
  position:relative;
  float:right;
  width:200px; 
+ 
 }
+
 input{
- border-color: black;
+    
+    border-color: black;
+    border-radius: 100px;
 	float: right;
 	margin-right: 980px;
 }
+
 .estilo {
  	width: 320px;
     padding: 10px;
     border: 5px solid gray;
     margin: 0; 
+}
+
+.input_fields_wrap{
+max-width: 350px;
+}
+.input_fields_wrap input[type=text]{
+ width:100%;
+ margin:2px 0;
 }

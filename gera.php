@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<head>
-	<body>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/gera.js"></script>
-		<script src="js/jquery-3.3.1.js"></script>
-		<title>Gerador de Currículos</title>
-		<h1>GeraCurrículo2018</h1>
-		
-        <form method="post" action="gera.php">
-		<div id="dados">
+<?php
+/* Carrega a classe DOMPdf */
+require_once("dompdf/dompdf_config.inc.php");
+
+/* Cria a instância */
+$dompdf = new DOMPDF();
+
+/* Define a formatação da página*/
+$dompdf->set_paper("A4", "portrail");
+
+/* Carrega seu HTML */
+$dompdf->load_html('<div id="dados">
 			<br><h3>Dados Pessoais</h3>
 			
 			Nome: <input type="text" name="Nome"> <br><br>
@@ -69,10 +69,16 @@
 			<br><h3>Outras Experiências</h3>
 			<textarea class="estilo">
 			</textarea>
-		</div>
-		
-		<input type="submit" name="enviar" value="Gerar Currículo"><br>
-</form>
-</form>
-</body>
-</head>
+		</div>');
+
+/* Renderiza */
+$dompdf->render();
+
+/* Exibe */
+$dompdf->stream(
+    "curriculo.pdf", /* Nome do arquivo de saída */
+    array(
+        "Attachment" => true /* Para exibir, altere para false */
+    )
+);
+?>
