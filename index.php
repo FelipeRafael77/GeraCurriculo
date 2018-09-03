@@ -6,13 +6,14 @@
 		<script src="js/gera.js"></script>
 		<script src="js/jquery-3.3.1.js"></script>
 		<title>Gerador de Currículos</title>
+		
 		<h1>GeraCurrículo2018</h1>
 		
-        <form method="post" action="gera.php">
+        
 		<div id="dados">
 			<br><h3>Dados Pessoais</h3>
 			
-			Nome: <input type="text" name="Nome"> <br><br>
+			Nome: <input type="text" name="nome"> <br><br>
 			Data de nascimento: <input type="text" name="data"><br><br>
 			Idade: <input type="text" name="idade"><br><br>
 			Estado civil: <input type="text" name="ec"><br><br>
@@ -24,41 +25,26 @@
 			<br><h3>Objetivos</h3>
 			Área de Interesse: <input type="text" name="a">
 			
-			<br><h3>Histórico Profissional</h3>
+			<div class="card-body" id="div-formacoes">
+                    <h4 class="card-title">Formação</h4>
+                    <br><button class="btn btn-sm right" id="btn-adicionar-formacao" name="addEx" title="Adicionar formação" onmouseenter="adicionaExp();">+</button>
+                </div>
 			
-			Empresa: <input type="text" name="e"><br><br>
-			Área: <input type="text" name="a"><br><br>
-			Cargo: <input type="text" name="c"><br><br>
-			Início do Contrato: <input type="text" name="i"><br><br>
-			Término do Contrato: <input type="text" name="t">
-			
-			<br><h3>Referências Pessoais </h3>
+			<br><br><br><h3>Referências Pessoais </h3>
 
 			Nome: <input type="text" name="n"><br><br>
 			Telefone: <input type="text" name="t"><br><br>
 			Cidade: <input type="text" name="c"><br><br>
 			UF: <input type="text" name="u">
 
-
-			<br><h3>Formação Acadêmica</h3>
-			
-			Curso: <input type="text" name="c"><br><br>
-			Instituição de ensino: <input type="text" name="i"><br><br>
-			Local: <input type="text" name="l"><br><br>
-			<form>
-				<div class="tabela">Período: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; à
-					<div class="tab">
-						<label><input type="text" name="d">
-					</label>
-				</div>
-				<div class="tab">
-					<label> <input type="text" name="j"></label>
-				</div>
-			</div>
+               <div class="card-body" id="div-experiencias">
+                    <h4 class="card-title">Experiência</h4>
+                    <br><button class="btn btn-sm right" id="btn-adicionar-experiencia" name="addEx" title="Adicionar experiência" onmouseenter="adicionaExp();">+</button>
+                </div>
 			
 			
 			<div class="idi">
-				<br><h3>Idiomas</h3>
+				<br><br><br><br><br><h3>Idiomas</h3>
 			</div>
 			Idioma: <input type="text" name="i"><br><br>
 			Nível: <input type="text" name="n">
@@ -67,12 +53,13 @@
 			Local: <input type="text" name="loc"><br><br>
 			Instituição: <input type="text" name="in">
 			<br><h3>Outras Experiências</h3>
-			<textarea class="estilo">
+			<textarea class="estilo" name="xtx">
 			</textarea>
 		</div>
-		
-		<input type="submit" name="enviar" value="Gerar Currículo"><br>
+		<form method="post" action="gera.php">
+		<input type="submit" name="enviar" value="Gerar Currículo">
 </form>
+     <input type="submit" name="enviar" value="Redefinir Campos" onclick="limpaCampos();">
 </form>
 </body>
 </head>
