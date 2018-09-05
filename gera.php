@@ -1,6 +1,6 @@
 <?php
 /* Carrega a classe DOMPdf */
-require_once("dompdf/dompdf_config.inc.php");
+require_once("libpdf/dompdf/dompdf_config.inc.php");
 
 /* Cria a instância */
 $dompdf = new DOMPDF();
