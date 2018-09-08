@@ -1,29 +1,46 @@
 body{
-	background-color: grey;
+    background: #B0C4DE
 }
 
 h1{
 	font-family: Arial;
 	text-align: center;
 }
-
+#dado{
+    border: 6px solid #000000;
+width: 330px;
+}
+#adi{
+    border: 6px solid #000000;
+width: 330px;
+}
+#rp{
+     border: 6px solid #000000;
+     width: 330px;   
+}
+#id{
+     border: 6px solid #000000;
+     width: 330px;  
+}
+#cse{
+ border: 6px solid #000000;
+     width: 330px;  
+}
 #dados{
-	font-family: Arial;
+font-family: Arial;
+ font-size:19px; 
+     color: black;
+    text-shadow: 2px -2px 10px black;
 }
 
 #dados h3{
+    border:solid 1px;
+    border-radius:0px 20px 0px 20px;
 	text-align: center;
 }
 
 .idi{
 	margin-right: 20px;
-}
-
-#botoes input{
-	 display:inline;
-    text-align: center;
-    float: left;
-    margin: auto;
 }
 
 form .tabela { 
@@ -39,11 +56,18 @@ form .tabela .tab{
 }
 
 input{
-    
-    border-color: black;
-    border-radius: 100px;
-	float: right;
-	margin-right: 980px;
+      border-radius:18px;
+    -moz-border-radius:7px;
+    -webkit-border-radius:4px;
+    box-shadow: 60px -16px teal;    
+    -moz-box-shadow: 5px 6px 7px #333333;
+    -webkit-box-shadow: 5px 5px 7px #333333;
+    background: #cccccc; 
+    border:2px solid #000000;
+    display:list-item;
+    height:60px;
+
+
 }
 
 .estilo {

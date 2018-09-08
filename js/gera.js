@@ -67,25 +67,3 @@ function adicionaExp(){
         $(this).parent().parent().parent().parent().remove();
     })
 };
-
-
-function limpaCampos(){
-    jQuery("input[name='nome']").val( '' );
-    jQuery("input[name='idade']").val( '' );
-    jQuery("input[name='ec']").val( '' );
-    jQuery("input[name='end']").val( '' );
-    jQuery("input[name='cep']").val( '' );
-    jQuery("input[name='email']").val( '' );
-    jQuery("button[name='addEX']").val( '' );
-    jQuery("input[name='a']").val( '' );
-    jQuery("input[name='n']").val( '' );
-    jQuery("input[name='t']").val( '' );
-    jQuery("input[name='c']").val( '' );
-    jQuery("input[name='u']").val( '' );
-    jQuery("input[name='i']").val( '' );
-    jQuery("input[name='ex']").val( '' );
-    jQuery("input[name='loc']").val( '' );
-    jQuery("input[name='in']").val( '' );
-    jQuery("textarea[name='xtx']").val( '' );
-
-}
